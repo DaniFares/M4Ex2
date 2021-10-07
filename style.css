@@ -1,0 +1,88 @@
+body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.cancha{
+    display: flex;
+    align-content: center;
+    background: rgb(13, 100, 13);
+    margin-top: 5vh;
+    width: 500px;    
+    height: 500px;
+    z-index: ;
+}
+
+
+.eje-pelota{
+
+translateX:220px;
+position:relative;
+animation: lateral 15s infinite;
+animation-timing-function:ease-in-out;
+}
+
+.pelota{
+    background-color: rgb(202, 223, 19);
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 100px;
+    animation: bounce 0.9s infinite;
+    animation-timing-function: ease;
+    
+    /*
+    animation-name: bounce;
+    animation-duration: 3s; 
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    */
+    
+}
+
+
+@keyframes bounce{
+
+10%{
+        height: 50px;
+        width: 50px;
+    }
+
+30%{
+        height: 50px;
+        width: 40px;
+}
+
+
+50%{
+        height: 30px;
+        width: 57px;    
+        transform:translateY(370px)
+    }
+
+
+75%{
+        height: 50px;
+        width: 57px;
+    }
+
+100%{
+    transform:translateY(0px);
+    }
+
+}
+
+
+@keyframes lateral{
+    
+    0%{left: 0px;}
+
+    50%{left:445px}
+
+    100%{left:0px}
+
+    
+}
